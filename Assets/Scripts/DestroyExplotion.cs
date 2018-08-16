@@ -13,11 +13,10 @@ public class DestroyExplotion : MonoBehaviour
     // Update is called once per frame
     IEnumerator TimeOfDestroyExplotion()
     {
-        for (float f = 1f; f >= 0; f -= 0.2f)
-        {
+        
             yield return new WaitForSeconds(0.2f);
 
-        }
+        
         Destroy(this.gameObject);
     }
     void Update()

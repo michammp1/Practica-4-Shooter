@@ -26,7 +26,7 @@ public class Autowalk : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire2"))
         {
             isWalking = !isWalking;
         }

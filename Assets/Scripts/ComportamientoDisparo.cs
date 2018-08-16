@@ -8,10 +8,10 @@ public class ComportamientoDisparo : MonoBehaviour
     public float velDisparo = 25;
     public float meDistaciaposi;
     public float meDistacianega;
-    public Transform explosion;
+    //public Transform explosion;
     public static int desexplotion;
-    public static float puntos;
-    public static int contador;
+    //public static float puntos;
+    //public static int contador;
     //public Transform explosionPosition;
 
     void Start()
@@ -20,8 +20,8 @@ public class ComportamientoDisparo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.up * velDisparo * Time.deltaTime);
-        if (transform.position.z >= meDistaciaposi)
+        transform.Translate(Vector3.forward * velDisparo * Time.deltaTime);
+        /*if (transform.position.z >= meDistaciaposi)
         {
             Destroy(this.gameObject);
         }
@@ -44,7 +44,7 @@ public class ComportamientoDisparo : MonoBehaviour
         if (transform.position.y <= meDistacianega)
         {
             Destroy(this.gameObject);
-        }
+        }*/
         desexplotion = 0;
 
     }
@@ -55,11 +55,11 @@ public class ComportamientoDisparo : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(this.gameObject);
-            Instantiate(explosion, transform.position, transform.rotation);
+            //Instantiate(explosion, transform.position, transform.rotation);
             desexplotion = 1;
-            contador += 1;
-            puntos += 3.448275862068966f;
-            puntos = Mathf.Round(puntos);
+            //contador += 1;
+            //puntos += 3.448275862068966f;
+            //puntos = Mathf.Round(puntos);
         }
 
     }

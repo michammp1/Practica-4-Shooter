@@ -8,6 +8,7 @@ public class Disparo : MonoBehaviour
 
     public Transform arma;
     public Transform disparo;
+    public Transform Camera;
     void Start()
     {
 
@@ -18,7 +19,7 @@ public class Disparo : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Instantiate(disparo, arma.position, arma.rotation);
+            Instantiate(disparo, arma.position, Camera.rotation);
         }
 
     }
